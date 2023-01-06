@@ -1,0 +1,1 @@
+table(cut(iris$Sepal.Length,5))

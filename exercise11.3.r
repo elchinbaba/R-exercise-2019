@@ -1,0 +1,9 @@
+x<-data.frame()
+y<-as.data.frame(table(Species[Sepal.Length<5]))
+y<-do.call(rbind,y)
+z<-as.data.frame(table(Species[!(Sepal.Length<5)]))
+z<-do.call(rbind,z)
+x<-rbind(x,z[2,],y[2,])
+names(x)=levels(Species)
+row.names(x)=c(FALSE,TRUE)
+x

@@ -1,0 +1,1 @@
+table(iris$Sepal.Length <5,iris$Species)

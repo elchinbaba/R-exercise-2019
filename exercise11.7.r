@@ -1,0 +1,5 @@
+library(readxl)
+Vegetation2 <- read_excel("Vegetation2.xls")
+attach(Vegetation2)
+plot(BARESOIL[Time==2002],R[Time==2002],main="observations",xlab="BARESOIL",ylab="Species Richness",lwd=10)
+points(BARESOIL[!(Time==2002)],R[!(Time==2002)])
